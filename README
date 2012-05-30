@@ -1,0 +1,48 @@
+Before you use this application, you must replace the placeholder application ID and key with values provided by Nuance for your developer account. You can obtain your ID and key from the Nuance Mobile Developer portal located at http://dragonmobile.nuancemobiledeveloper.com/.
+
+
+For developing iPhone application, copy and paste your Application Key that your received from Nuance. This is required to use your credentials to establish a connection. These snippets can be found in both ViewController.m
+
+/**
+ * The login parameters should be specified in the following manner:
+ * 
+ * const unsigned char SpeechKitApplicationKey[] =
+ * {
+ *     0x38, 0x32, 0x0e, 0x46, 0x4e, 0x46, 0x12, 0x5c, 0x50, 0x1d,
+ *     0x4a, 0x39, 0x4f, 0x12, 0x48, 0x53, 0x3e, 0x5b, 0x31, 0x22,
+ *     0x5d, 0x4b, 0x22, 0x09, 0x13, 0x46, 0x61, 0x19, 0x1f, 0x2d,
+ *     0x13, 0x47, 0x3d, 0x58, 0x30, 0x29, 0x56, 0x04, 0x20, 0x33,
+ *     0x27, 0x0f, 0x57, 0x45, 0x61, 0x5f, 0x25, 0x0d, 0x48, 0x21,
+ *     0x2a, 0x62, 0x46, 0x64, 0x54, 0x4a, 0x10, 0x36, 0x4f, 0x64
+ * };
+ * 
+ * Please note that all the specified values are non-functional
+ * and are provided solely as an illustrative example.
+ * 
+ */
+
+const unsigned char SpeechKitApplicationKey[] = {INSERT_YOUR_APPLICATION_KEY_HERE};
+
+Replace "INSERT_YOUR_APPLICATION_KEY_HERE" with the Application Key you received from Nuance. 
+
+/**    
+     * The login parameters should be specified in the following manner:
+     *
+     *  [SpeechKit setupWithID:@"ExampleSpeechKitSampleID"
+     *                    host:@"ndev.server.name"
+     *                    port:1000
+     *                  useSSL:NO
+     *                delegate:self];
+     *
+     * Please note that all the specified values are non-functional
+     * and are provided solely as an illustrative example.
+     */ 
+    
+    [SpeechKit setupWithID:INSERT_YOUR_APPLICATION_ID_HERE
+                      host:INSERT_YOUR_HOST_ADDRESS_HERE
+                      port:INSERT_YOUR_HOST_PORT_HERE
+                    useSSL:NO
+                  delegate:self];
+
+Follow the Instruction received from Nuance by email to replace this section.
+
